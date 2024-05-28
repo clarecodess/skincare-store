@@ -4,6 +4,7 @@ import { Search } from '@mui/icons-material';
 import { ShoppingBasket } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import './LoginPage.js';
 
 function Header() {
 
@@ -17,11 +18,15 @@ function Header() {
             <input className='header-searchInput' type='text'/>
             <Search className='header-searchIcon'/>
         </div>
+
+        
         <div className='header-nav'>
+            <Link to='/login'>
             <div className='header-option'>
                 <span className='header-optionLineOne'>Hello Guest</span>
                 <span className='header-optionLineTwo'>Sign In</span>
             </div>
+            </Link>
             <div className='header-option'>
                 <span className='header-optionLineOne'>Returns</span>
                 <span className='header-optionLineTwo'>& Orders</span>
