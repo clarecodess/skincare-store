@@ -1,20 +1,20 @@
-import React from 'react';
-import Home from './components/Home';
-import Header from './components/Header';
-import Checkout from './components/Checkout';
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LoginPage from './components/LoginPage';
+import React from "react";
+import Home from "./components/Home";
+import Header from "./components/Header";
+import Checkout from "./components/Checkout";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
 
 function App() {
-  return ( 
+  return (
     <BrowserRouter>
-      <div className='app'>
-        <Header />
+      <div className="app">
+      
         <Routes>
-          <Route path="/login" element={<LoginPage />}></Route>
-          <Route path="/checkout" element={<Checkout />}></Route>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/checkout" element={<><Header /> <Checkout /></>}></Route>
+          <Route path="/" element={<><Header /> <Home /></>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
