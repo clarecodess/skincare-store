@@ -16,7 +16,6 @@ function Login() {
     e.preventDefault()
     // firebase register
     auth.createUserWithEmailAndPassword(email, password)
-    .createUserWithEmailAndPassword
     .then((auth) => {
       console.log(auth);
     })
