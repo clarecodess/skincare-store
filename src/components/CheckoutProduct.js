@@ -1,8 +1,26 @@
-import React from 'react'
+import React from 'react';
+import "./CheckoutProduct.css"
 
-function CheckoutProduct() {
+function CheckoutProduct({ id, image, title, price, rating }) {
   return (
-    <div>CheckoutProduct</div>
+    <div className='checkoutProduct'>
+        <img className='checkoutProduct_image' src={image}/>
+        <div className='checkoutProduct_info'>
+            <p className='checkoutProduct_title'>{title}</p>
+            <p className='checkoutProduct_price'>
+                <small>KES</small>
+                <strong>{price}</strong>
+            </p>
+            <div className='checkoutProduct_rating'>
+                {Array(rating)
+                .fill()
+                .map((_,i) => {
+                    <p>⭐</p>
+                })}
+            </div>
+            <button>Remove from Cart</button>
+        </div>
+    </div>
   )
 }
 
