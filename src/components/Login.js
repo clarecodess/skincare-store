@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 
 
 function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
   return (
     <div className='login'>
       <Link to='/'>
@@ -14,9 +18,9 @@ function Login() {
         <h1>Sign In</h1>
         <form>
           <h5>EMAIL</h5>
-          <input type='text'/>
+          <input type='text' value={email} onChange={e => setEmail(e.target.value)}/>
           <h5>PASSWORD</h5>
-          <input type='password'/>
+          <input type='password' value={password} onChange={e => setPassword(e.target.value)}/>
           <button className='login-signinButton'><strong>SIGN IN</strong></button>
         </form>
         <p>By signing in you agree to Organic Beauty Store's conditions of Use and Sale.
