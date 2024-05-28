@@ -1,13 +1,17 @@
 import React from 'react';
 import "./CheckoutProduct.css"
 import { useStateValue } from './StateProvider';
+import { type } from '@testing-library/user-event/dist/type';
 
 function CheckoutProduct({ id, image, title, price }) {
 
-    const [{cart}] = useStateValue();
+    const [{cart}, dispatch] = useStateValue();
 
     const removeFromCart = () => {
-
+        dispatch({
+            type: 'REMOVE_FROM_CART',
+            id:id
+        })
     }
 
   return (
