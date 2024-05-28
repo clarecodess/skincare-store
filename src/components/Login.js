@@ -6,6 +6,14 @@ import { Link } from 'react-router-dom';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const signIn = e => {
+    e.preventDefault();
+    // firebase login
+  }
+  const register = e => {
+    e.preventDefault()
+    // firebase register
+  }
 
 
   return (
@@ -21,12 +29,12 @@ function Login() {
           <input type='text' value={email} onChange={e => setEmail(e.target.value)}/>
           <h5>PASSWORD</h5>
           <input type='password' value={password} onChange={e => setPassword(e.target.value)}/>
-          <button className='login-signinButton'><strong>SIGN IN</strong></button>
+          <button className='login-signinButton' onClick={signIn} type='submit'><strong>SIGN IN</strong></button>
         </form>
         <p>By signing in you agree to Organic Beauty Store's conditions of Use and Sale.
           Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
         </p>
-        <button className='login-registerButton'><strong>REGISTER NEW ACCOUNT</strong></button>
+        <button className='login-registerButton' onClick={register} ><strong>REGISTER NEW ACCOUNT</strong></button>
       </div>
     </div>
   )
