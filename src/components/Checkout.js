@@ -9,6 +9,7 @@ function Checkout() {
             <img className='checkout-img' src='checkoutpagebanner.jpg' alt=''/>
             <div>
                 <h2 className='checkout-title'>Your Cart</h2>
+                {/*CheckoutProduct*/}
             </div>
         </div>
 
