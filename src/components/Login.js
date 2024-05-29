@@ -1,27 +1,48 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
+
   const signIn = e => {
     e.preventDefault();
-    // firebase login
-  }
-  const register = e => {
-    e.preventDefault()
-    // firebase register
-    auth.createUserWithEmailAndPassword(email, password)
-    .then((auth) => {
-      console.log(auth);
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredentials) => {
+      const user = userCredentials.user;
+      navigate('/')
+      console.log(user);
     })
-    .catch(error => alert(error.message))
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage)
+    });
+  }
+
+  
+  const register = async (e) => {
+      e.preventDefault()
+      await createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredentials) => {
+            const user = userCredentials.user;
+            console.log(user);
+            navigate('/')
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+        });
     
   }
+  
 
 
   return (
