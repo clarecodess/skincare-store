@@ -2,12 +2,23 @@ import React from "react";
 import "./Header.css";
 import { Search } from "@mui/icons-material";
 import { ShoppingBasket } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 import "./Login.js";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase.js";
 
 function Header() {
-  const [{ cart }] = useStateValue();
+  const [{ cart, user }] = useStateValue();
+  const navigate = useNavigate();
+  const handleAuthentication = () => {
+    signOut(auth).then(() => {
+      navigate('/');
+      console.log('Signed out successfully')
+    }).catch((error) => {
+      // error occured
+    });
+  }
 
   return (
     <div className="header">
@@ -22,9 +33,9 @@ function Header() {
 
       <div className="header-nav">
         <Link to="/login">
-          <div className="header-option">
+          <div onClick={handleAuthentication} className="header-option">
             <span className="header-optionLineOne">Hello Guest</span>
-            <span className="header-optionLineTwo">Sign In</span>
+            <span className="header-optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
         <div className="header-option">
