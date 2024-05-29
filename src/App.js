@@ -7,16 +7,27 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { useStateValue } from "./components/StateProvider";
 
 function App() {
+  const [{}, dispatch] = useStateValue();
+
   useEffect(() =>{
     //run once when app component loads
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          const uid = user.uid;
-          console.log("uid", uid)
+          
+          console.log("The user is logged in", user)
+          dispatch({
+            type:'SET_USER',
+            user:user
+          })
         } else {
-          console.log("user is logged out")
+          dispatch({
+            type:'SET_USER',
+            user:null
+          })
+          
         }
       } )
   },[])
