@@ -2,15 +2,16 @@ import React, { useEffect } from 'react';
 import './Payment.css';
 import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useState } from 'react';
 import { getCartTotal } from './reducer';
 import { NumericFormat } from 'react-number-format';
-import instance from '../utils.js/axios';
+import axios from './axios';
 
 function Payment() {
     const navigate = useNavigate();
+
     const [{cart, user}, dispatch] = useStateValue(); 
     const stripe = useStripe();
     const elements = useElements();
@@ -34,6 +35,8 @@ function Payment() {
 
         getClientSecret();
     }, [cart]) ;
+
+    console.log('The secret is ', clientSecret)
 
     const handleSubmit = async (event) => { 
         event.preventDefault();
