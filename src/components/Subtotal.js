@@ -28,9 +28,9 @@ function Subtotal() {
           }
           decimalScale={2}
           value={getCartTotal(cart)}
-          displayType='text'
+          displayType={'text'}
           thousandSeparator={true}
-          prefix={'KES'}
+          prefix={'$'}
         />
 
         <button onClick={() => navigate('/payment')}><strong>PROCEED TO CHECKOUT</strong></button>

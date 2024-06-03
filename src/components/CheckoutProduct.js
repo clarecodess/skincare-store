@@ -20,7 +20,7 @@ function CheckoutProduct({ id, image, title, price }) {
         <div className='checkoutProduct_info'>
             <p className='checkoutProduct_title'>{title}</p>
             <p className='checkoutProduct_price'>
-                <small>KES</small>
+                <small>$</small>
                 <strong>{price}</strong>
             </p>
             <button onClick={removeFromCart}><strong>REMOVE FROM CART</strong></button>
