@@ -3,7 +3,7 @@ import "./CheckoutProduct.css"
 import { useStateValue } from './StateProvider';
 
 
-function CheckoutProduct({ id, image, title, price }) {
+function CheckoutProduct({ id, image, title, price, hideButton }) {
 
     const [{cart}, dispatch] = useStateValue();
 
@@ -20,10 +20,12 @@ function CheckoutProduct({ id, image, title, price }) {
         <div className='checkoutProduct_info'>
             <p className='checkoutProduct_title'>{title}</p>
             <p className='checkoutProduct_price'>
-                <small>$</small>
+                <small>KES </small>
                 <strong>{price}</strong>
             </p>
-            <button onClick={removeFromCart}><strong>REMOVE FROM CART</strong></button>
+            {!hideButton && 
+                <button onClick={removeFromCart}><strong>REMOVE FROM CART</strong></button>
+            }
         </div>
     </div>
   )

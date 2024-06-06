@@ -30,7 +30,7 @@ function Subtotal() {
           value={getCartTotal(cart)}
           displayType={'text'}
           thousandSeparator={true}
-          prefix={'$'}
+          prefix={'KES'}
         />
 
         <button onClick={() => navigate('/payment')}><strong>PROCEED TO CHECKOUT</strong></button>
