@@ -1,3 +1,4 @@
+/*
 .subtotal {
     display: flex;
     flex-direction: column;
@@ -27,3 +28,79 @@
     border: 1px solid #cfd6bc;
     margin-top: 10px;
 }
+    */
+    .subtotal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        height: 100px;
+        padding: 20px;
+        background-color: #ffeffc;
+        border: 1px solid #ffeffc;
+        border-radius: 2px;
+    }
+    
+    .subtotal-gift {
+        display: flex;
+        align-items: center;
+    }
+    
+    .subtotal-gift > input {
+        margin-right: 5px;
+    }
+    
+    .subtotal > button {
+        background-color: #cfd6bc;
+        border-radius: 2px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid #cfd6bc;
+        margin-top: 10px;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1200px) {
+        .subtotal {
+            width: 280px;
+            padding: 18px;
+        }
+    
+        .subtotal > button {
+            height: 28px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .subtotal {
+            width: 260px;
+            padding: 16px;
+        }
+    
+        .subtotal > button {
+            height: 26px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .subtotal {
+            width: 240px;
+            padding: 14px;
+        }
+    
+        .subtotal > button {
+            height: 24px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .subtotal {
+            width: 220px;
+            padding: 12px;
+        }
+    
+        .subtotal > button {
+            height: 22px;
+        }
+    }
+    

@@ -1,4 +1,4 @@
-.payment {
+/* .payment {
     background-color: #fff8f8;
 }
 
@@ -49,4 +49,156 @@
     border-color: #cfd6bc;
     color: #111;
 }
+    */
+    .payment {
+        background-color: #fff8f8;
+    }
+    
+    .payment-container > h1 {
+        text-align: center;
+        padding: 10px;
+        font-weight: 500;
+        background-color: #95B8D1;
+        border-bottom: 1px solid #95B8D1;
+    }
+    
+    .payment-container > h1 a {
+        text-decoration: none;
+    }
+    
+    .payment-section {
+        display: flex;
+        padding: 20px;
+        margin: 0 20px;
+        border-bottom: 1px solid #95B8D1;
+    }
+    
+    .payment-title {
+        flex: 0.2;
+    }
+    
+    .payment-address, .payment-items, .payment-details {
+        flex: 0.8;
+    }
+    
+    .payment-details > form {
+        max-width: 400px;
+    }
+    
+    .payment-details > h3 {
+        padding-bottom: 20px;
+    }
+    
+    .payment-details > form > div > button {
+        background: #cfd6bc;
+        border-radius: 2px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid;
+        font-weight: bolder;
+        margin-top: 10px;
+        border-color: #cfd6bc;
+        color: #111;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1200px) {
+        .payment-section {
+            padding: 18px;
+            margin: 0 18px;
+        }
+    
+        .payment-container > h1 {
+            font-size: 1.2em;
+        }
+    
+        .payment-details > form {
+            max-width: 350px;
+        }
+    
+        .payment-details > h3 {
+            padding-bottom: 18px;
+        }
+    
+        .payment-details > form > div > button {
+            height: 28px;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .payment-section {
+            flex-direction: column;
+            padding: 16px;
+            margin: 0 16px;
+        }
+    
+        .payment-container > h1 {
+            font-size: 1.1em;
+        }
+    
+        .payment-title, .payment-address, .payment-items, .payment-details {
+            flex: 1;
+            margin-top: 10px;
+        }
+    
+        .payment-details > form {
+            max-width: 300px;
+        }
+    
+        .payment-details > h3 {
+            padding-bottom: 16px;
+        }
+    
+        .payment-details > form > div > button {
+            height: 26px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .payment-section {
+            padding: 14px;
+            margin: 0 14px;
+        }
+    
+        .payment-container > h1 {
+            font-size: 1em;
+        }
+    
+        .payment-details > form {
+            max-width: 250px;
+        }
+    
+        .payment-details > h3 {
+            padding-bottom: 14px;
+        }
+    
+        .payment-details > form > div > button {
+            height: 24px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .payment-section {
+            padding: 12px;
+            margin: 0 12px;
+        }
+    
+        .payment-container > h1 {
+            font-size: 0.9em;
+            padding: 8px;
+        }
+    
+        .payment-details > form {
+            max-width: 200px;
+        }
+    
+        .payment-details > h3 {
+            padding-bottom: 12px;
+        }
+    
+        .payment-details > form > div > button {
+            height: 22px;
+        }
+    }
+    
 

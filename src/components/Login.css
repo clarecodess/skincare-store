@@ -1,3 +1,4 @@
+/*
 .login {
     display: flex;
     flex-direction: column;
@@ -63,4 +64,157 @@
     margin-top: 10px;
     background-color: #95B8D1;
     
+}
+
+*/
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-container {
+    width: 450px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    border: 1px solid #fff8f8;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.login-container > h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.login-container > form > h5 {
+    margin-bottom: 5px;
+}
+
+.login-container > form > input {
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #fff8f8;
+    width: 98%;
+}
+
+.login-container > p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.login-signinButton {
+    background-color: #cfd6bc;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #cfd6bc;
+    margin-top: 10px;
+}
+
+.login-registerButton {
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #95B8D1;
+    margin-top: 10px;
+    background-color: #95B8D1;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .login-logo {
+        width: 180px;
+    }
+
+    .login-container {
+        width: 400px;
+        padding: 18px;
+    }
+
+    .login-container > h1 {
+        font-size: 1.2em;
+    }
+
+    .login-container > p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 992px) {
+    .login-logo {
+        width: 150px;
+    }
+
+    .login-container {
+        width: 350px;
+        padding: 16px;
+    }
+
+    .login-container > h1 {
+        font-size: 1.1em;
+    }
+
+    .login-container > p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-logo {
+        width: 130px;
+    }
+
+    .login-container {
+        width: 300px;
+        padding: 14px;
+    }
+
+    .login-container > h1 {
+        font-size: 1em;
+    }
+
+    .login-container > p {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-logo {
+        width: 100px;
+    }
+
+    .login-container {
+        width: 250px;
+        padding: 12px;
+    }
+
+    .login-container > h1 {
+        font-size: 0.9em;
+    }
+
+    .login-container > form > h5 {
+        font-size: 0.8em;
+    }
+
+    .login-container > form > input {
+        height: 25px;
+    }
+
+    .login-container > p {
+        font-size: 8px;
+    }
 }
