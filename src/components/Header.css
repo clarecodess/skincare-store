@@ -1,76 +1,3 @@
-/*
-.header {
-    background-color: #D6EADF;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-
-}
-
-.header-logo {
-    width: 100px;
-    object-fit: contain;
-    margin: 0 20px;
-    margin-top: 10px;
-    
-}
-
-.header-search {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    box-sizing: 24px;
-}
-
-.header-searchInput {
-    height: 12px;
-    padding: 10px;
-    border: none;
-    width: 100%;
-}
-
-.header-searchIcon {
-    padding: 5px;
-    height: 22px !important;
-    background-color: #809BCE;
-}
-
-.header-optionLineOne {
-    font-size: 14px;
-}
-
-.header-optionLineTwo {
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.header-optionBasket {
-    display: flex;
-    align-items: center;
-}
-
-.header-basketCount {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.header-nav {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.header-option {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-*/
-
 .header {
     background-color: #D6EADF;
     height: 100px;
@@ -140,7 +67,7 @@
     margin-right: 10px;
 }
 
-/* Responsive styles */
+
 @media (max-width: 1200px) {
     .header {
         height: 90px;
@@ -176,7 +103,7 @@
     }
 
     .header-optionLineOne, .header-optionLineTwo {
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
@@ -200,7 +127,7 @@
     }
 
     .header-optionLineOne, .header-optionLineTwo {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .header-nav {
@@ -223,16 +150,17 @@
     }
 
     .header-searchInput {
-        height: 6px;
+        height: 10px;
         padding: 4px;
+        
     }
 
     .header-searchIcon {
-        height: 6px !important;
+        height: 8px !important;
     }
 
     .header-optionLineOne, .header-optionLineTwo {
-        font-size: 6px;
+        font-size: 10px;
         justify-content: space-between;
         padding: 3px;
         
@@ -249,6 +177,8 @@
     .header-option {
         margin: 5px 0;
     }
-}
+} 
+
+
 
 
