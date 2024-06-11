@@ -1,7 +1,60 @@
+/* .orders {
+    padding: 20px 80px;
+}
+
+.orders > h1 {
+    margin: 30px 0;
+} */
+
 .orders {
     padding: 20px 80px;
 }
 
 .orders > h1 {
     margin: 30px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .orders {
+        padding: 18px 72px;
+    }
+
+    .orders > h1 {
+        margin: 28px 0;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 992px) {
+    .orders {
+        padding: 16px 64px;
+    }
+
+    .orders > h1 {
+        margin: 26px 0;
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 768px) {
+    .orders {
+        padding: 14px 56px;
+    }
+
+    .orders > h1 {
+        margin: 24px 0;
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 576px) {
+    .orders {
+        padding: 12px 48px;
+    }
+
+    .orders > h1 {
+        margin: 22px 0;
+        font-size: 1.2em;
+    }
 }

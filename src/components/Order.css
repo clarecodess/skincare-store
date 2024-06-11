@@ -1,4 +1,4 @@
-.order {
+/* .order {
     padding: 40px;
     margin: 20px 0;
     border: 1px solid #809BCE;
@@ -17,3 +17,92 @@
     font-weight: 500;
     text-align: right;
 }
+    */
+
+    .order {
+        padding: 40px;
+        margin: 20px 0;
+        border: 1px solid #809BCE;
+        background-color: #fff8f8;
+        position: relative;
+    }
+    
+    .order-id {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+    }
+    
+    .order-total {
+        font-weight: 500;
+        text-align: right;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 1200px) {
+        .order {
+            padding: 36px;
+            margin: 18px 0;
+        }
+    
+        .order-id {
+            top: 36px;
+            right: 18px;
+        }
+    
+        .order-total {
+            font-size: 1em;
+        }
+    }
+    
+    @media (max-width: 992px) {
+        .order {
+            padding: 32px;
+            margin: 16px 0;
+        }
+    
+        .order-id {
+            top: 32px;
+            right: 16px;
+            font-size: 0.9em;
+        }
+    
+        .order-total {
+            font-size: 0.95em;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .order {
+            padding: 28px;
+            margin: 14px 0;
+        }
+    
+        .order-id {
+            top: 28px;
+            right: 14px;
+            font-size: 0.85em;
+        }
+    
+        .order-total {
+            font-size: 0.9em;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .order {
+            padding: 24px;
+            margin: 12px 0;
+        }
+    
+        .order-id {
+            top: 24px;
+            right: 12px;
+            font-size: 0.8em;
+        }
+    
+        .order-total {
+            font-size: 0.85em;
+        }
+    }
+    
