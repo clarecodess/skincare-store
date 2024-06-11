@@ -99,6 +99,13 @@
         margin-top: 10px;
         border-color: #cfd6bc;
         color: #111;
+        transition: background-color 0.3s, transform 0.1s;
+    }
+
+    .payment-details >form > div > button:active {
+        background-color: #95B8D1;
+        transform: scale(0.95);
+        outline: none;
     }
     
     /* Responsive styles */

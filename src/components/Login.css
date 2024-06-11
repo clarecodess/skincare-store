@@ -123,6 +123,13 @@
     height: 30px;
     border: 1px solid #cfd6bc;
     margin-top: 10px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-signinButton > button:active {
+    background-color: #95B8D1;
+    transform: scale(0.95);
+    outline: none;
 }
 
 .login-registerButton {
@@ -132,6 +139,13 @@
     border: 1px solid #95B8D1;
     margin-top: 10px;
     background-color: #95B8D1;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.login-registerButton > button:active {
+    background-color: #cfd6bc;
+    transform: scale(0.95);
+    outline: none;
 }
 
 /* Responsive styles */

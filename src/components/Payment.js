@@ -76,7 +76,7 @@ function Payment() {
           <div className='payment-address'>
             <p>{user?.email}</p>
             <p>432 Fictional Lane</p>
-            <p>Fake Town, NBO</p>
+            <p>Utopia, Narnia</p>
           </div>
         </div>
         <div className='payment-section'>
@@ -116,6 +116,7 @@ function Payment() {
                   <button disabled={processing || disabled || success}>
                     <span>{processing ? <p>PROCESSING...</p> : "BUY NOW"}</span>
                   </button>
+                  <p>You have to be signed in to make an order</p>
                 </div>
                 {error && <div>{error}</div>}
               </form>

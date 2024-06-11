@@ -41,15 +41,6 @@
         border-radius: 2px;
     }
     
-    .subtotal-gift {
-        display: flex;
-        align-items: center;
-    }
-    
-    .subtotal-gift > input {
-        margin-right: 5px;
-    }
-    
     .subtotal > button {
         background-color: #cfd6bc;
         border-radius: 2px;
@@ -57,6 +48,13 @@
         height: 30px;
         border: 1px solid #cfd6bc;
         margin-top: 10px;
+        transition: background-color 0.3s, transform 0.1s;
+    }
+
+    .subtotal > button:active {
+        background-color: #95B8D1;
+        transform: scale(0.95);
+        outline: none;
     }
     
     /* Responsive styles */

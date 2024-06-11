@@ -63,6 +63,13 @@
     border: none;
     margin-top: 10px;
     padding: 10px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.product > button:active {
+    background-color: #95B8D1;
+    transform: scale(0.95);
+    outline: none;
 }
 
 .product-info {
